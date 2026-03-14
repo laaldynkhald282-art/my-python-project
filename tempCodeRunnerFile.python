@@ -1,0 +1,35 @@
+
+#set 1:setup
+library = []
+wishlist = []
+#set 2:adding invaildidul books
+enter_1 = input("enter the name a book you own: ")
+library.append(enter_1)
+enter_1 = input("enter the name of another book you own(press or enter): ")
+if enter_1:
+    library.append(enter_1)
+    print(f" library {library}")
+  
+#set 3: manging the wishlist    
+enter_2 = input("enter the name a bbok you wish to have in the future:")
+wishlist.append(enter_2)
+enter_2 = input("enter the name of another book you wish to have(pess or enter:)")
+wishlist.append(enter_2)
+if enter_2:
+    print(f"yor wishlist{wishlist}")
+#set 4: manging wishlist into library 
+enter_3 = input("enter the name of a book from your wishlist that you v'e quired:")
+if enter_3 in wishlist:
+    library.append(enter_3)
+    wishlist.remove(enter_3) 
+    print("updated library",library)
+    print("\nupdated wishlist",wishlist)
+#set 6:donations books    
+enter_4 = input("\nenter the name a book from your library you wish to donate ")
+if enter_4 in library:
+    library.remove(enter_4)
+    print("\nfinal library after donations:",library)
+
+
+
+       
