@@ -1,0 +1,25 @@
+items = []
+prices = []
+print("*****Welcome to ishop calculator *****")
+numper_of_items = int(input("how many items are there in your basket today?"))
+if numper_of_items > 0:
+    print("\nlet's goet to counting them....")
+    for a in range(0,numper_of_items):
+        name = input(f"please tell me the name of the item numper{a+1}")
+        items.append(name)
+        price = float(input(f"what is the price of {name}\n$"))
+        prices.append(price)
+
+
+    choice = input("would you like to see your entere basket items?\n(yes , no)").lower()
+    if choice == "yes":
+        print(items) 
+        see_prices = input("would you like to see how much it'll cost (yes))\n").lower()
+        if see_prices == "yes":
+            print(sum(prices))
+        else:
+            print("press enter to exit")
+    else:
+        input("press enter to exit" )            
+else:
+    input("seem like you are not in mood for shoping today")
